@@ -1,0 +1,363 @@
++++
+title = "IRC User Guide"
++++
+<h1>FOSS@KIIT IRC User Guide</h1>
+<p>
+    There is a channel for the FOSS@KIIT society at the Freenode IRC
+    network. This is an open channel; anyone is welcome to join this
+    channel and be a part of the community.
+</p>
+<p>
+    This guide describes the connection details, an example of how to
+    connect, and some nifty commands for IRC users and operators.
+</p>
+
+<h2>Contents</h2>
+<ul>
+    <li><a href="#connection">Connection Details</a></li>
+    <li><a href="#webchat">Webchat</a></li>
+    <li><a href="#pidgin">Pidgin</a></li>
+    <li><a href="#bots">NickServ and ChanServ</a></li>
+    <li><a href="#registration">Register Nickname</a></li>
+    <li><a href="#recovery">Recover Nickname</a></li>
+    <li><a href="#user">User Cheat Sheet</a></li>
+    <li><a href="#operator">Operator Cheat Sheet</a></li>
+</ul>
+
+<h2 id="connection">Connection Details</h2>
+<p>
+    Use the following connection details to connect to our channel.
+</p>
+<ul>
+    <li>Network: chat.freenode.net</li>
+    <li>Channel: #fosskiit</li>
+</ul>
+<p>
+    The above connection details are required while connecting to our
+    channel via Webchat or an IRC client. The next two sections
+    elaborate this further. While there are many IRC clients available
+    on the web, we choose Pidgin to demonstrate how to connect to our
+    channel.
+
+<h2 id="webchat">Webchat</h2>
+<p>
+    This method of connecting via the web based interface does not require the
+    installation of any additional tools. This is the simplest method to
+    connect to our channel.
+</p>
+<ol>
+<li>
+    Visit <a
+    href="https://webchat.freenode.net/?channels=fosskiit">https://webchat.freenode.net/?channels=fosskiit</a>
+    with your web browser.
+</li>
+<li>
+    Enter a nickname of your choice.
+</li>
+<li>
+    If you are new to the Freenode network, you would not have your
+    nickname registered with the network, so ignore this point. If you have
+    registered your nickname before, and you want to connect using your
+    password, select <i>Auth to Services</i>, set <i>Username</i> to your
+    nickname and <i>Password</i> to your password.
+</li>
+<li>
+    Click <i>Connect</i>.
+</li>
+</ol>
+
+<h2 id="pidgin">Pidgin</h2>
+<p>
+    There are many IRC clients available on the web. For the sake of
+    brevity, we want to demonstrate how to connect to our channel with
+    only one of them. We choose Pidgin as the client here.
+</p>
+<ol>
+<li>
+    Download Pidgin from
+    <a href="https://pidgin.im/">https://pidgin.im/</a> and install
+    it.
+    <ul>
+    <li>
+        If you are on Mac and use
+        <a href="https://brew.sh/">Homebrew</a>, you may install it
+        simply by entering the following command.
+        <pre>brew install pidgin</pre>
+    </li>
+    <li>
+    On a Debian or Ubuntu based system, you may install it by entering
+    the following command.
+    <pre>apt-get update &amp;&amp; apt-get install pidgin</pre>
+    </li>
+    </ul>
+</li>
+<li>
+    Run Pidgin.
+</li>
+<li>
+    From the menu, select <i>Accounts</i> &gt; <i>Manage Accounts</i>.
+    Click <i>Add</i>.
+</li>
+</li>
+<li>
+    In the <i>Basic</i> tab, set the following details.
+    <ul>
+    <li><i>Protocol:</i> IRC</li>
+    <li><i>Username:</i> A nickname of your choice</li>
+    <li><i>Server:</i> chat.freenode.net</li>
+    <li>
+        <i>Password</i>: You may leave this blank if you are connecting
+        for the first time. If you have registered your nickname before,
+        enter your password here.
+    </li>
+    </ul>
+</li>
+<li>
+    Go to <i>Advanced</i> tab and set the following details.
+    <ul>
+    <li><i>Port:</i> 6697</li>
+    <li>Select <i>Use SSL</i>.</li>
+    </ul>
+</li>
+<li>
+    Click <i>Add</i>. Click <i>Close</i>.
+</li>
+<li>
+    Wait for the status of Pidgin to change to <i>Available</i> with a
+    green disc.
+</li>
+<li>
+    From the menu, select <i>Buddies</i> &gt; <i>Join a Chat.</i>. Enter
+    the following details.
+    <ul>
+    <li><i>Account:</i> Set it to the account that was just created.</li>
+    <li><i>Channel:</i> #fosskiit</li>
+    <li>
+        <i>Password:</i> Leave this blank. Our channel does not require
+        password.
+    </li>
+    </ul>
+<li>
+    Click <i>Join</i>.
+</li>
+</ol>
+<p>
+    As an alternative to the last two steps, if you find that new
+    Freenode tabs open after the status changes to <i>Available</i>, you
+    may simply enter the following command where you would normally type
+    a chat message.
+</p>
+<pre>/join #fosskiit</pre>
+
+<h2 id="bots">NickServ and ChanServ</h2>
+<p>
+    There are two bots, NickServ and ChanServ, which help us with
+    nickname and channel management activities. This is explained in the
+    sections below.
+</p>
+
+<h2 id="registration">Register Nickname</h2>
+<p>
+    Once you have connected to the network, you can register your
+    nickname.  Traditionally, there was no concept of nickname
+    registration in IRC.  Anyone was free to use any unused nickname.
+    But nowadays, in many IRC networks including Freenode, you can
+    register a nickname to ensure that someone else cannot use your
+    nickname.
+</p>
+<p>
+    To register the nickname, enter the following command on the IRC
+    client. Remember to enter the password you want and your actual
+    email address as the last two arguments in the command below.
+</p>
+<pre>/msg nickserv register <i>password</i> <i>email</i></pre>
+<p>
+    You would receive an email with further instructions about
+    completing the registration. Follow these instructions and complete
+    the registration.
+</p>
+<p>
+    After you have registered, you can identify yourself to the network
+    while connecting by entering your password in the <i>Password</i>
+    field.
+</p>
+<p>
+    To identify yourself to the network while you are connected without
+    reconnecting, enter the following command.
+</p>
+<pre>/msg nickserv identify <i>password</i></pre>
+<p>
+    Note that simply registering your nickname doesn't prevent anyone
+    else from using your nick when you are absent. It only ensures that
+    you can recover your nick when you are online even if someone else
+    is using it.
+</p>
+<p>
+    If you really want to ensure that nobody else is able to use your
+    nick
+    even when you are absent, enter the following command.
+</p>
+<pre>/msg nickserv set enforce on</pre>
+<p>
+    This ensures that even if someone uses your nick when you are
+    absent, he is forced to change his nick within 30 seconds.
+</p>
+
+<h2 id="recovery">Recover Nickname</h2>
+<p>
+    There are usually two situations in which you would want to recover
+    your nick.
+</p>
+<ol>
+<li>
+    Someone else is using your nick.
+</li>
+<li>
+    You got disconnected from the network abruptly due to network issues
+    but when you try to connect again, the server tells you that the
+    nick is already being used. This happens when the server doesn't
+    realize that your connection was terminated due to network issues.
+    This is called a ghost connection. The server automatically
+    terminates the ghost connection after a timeout of about 4.5
+    minutes.
+</li>
+</ol>
+<p>
+    To recover your nick, enter the following command.
+</p>
+<pre>/msg nickserv ghost <i>nick</i> <i>password</i></pre>
+<p>
+After executing that the server will tell you that the nickname has been
+ghosted. Now, you can change acquire your actual nick again with the
+command: <code>/nick <i>nick</i></code>.
+</p>
+
+<h2 id="user">User Cheat Sheet</h2>
+<p>
+    All IRC commands begin with a forward slash, i.e., <code>/</code>.
+    Here is a list of some useful commands.
+</p>
+<ol>
+<li>
+    Change nickname.
+    <pre>/nick <i>newnick</i></pre>
+</li>
+<li>
+    Join a channel.
+    <pre>/join <i>channelname</i></pre>
+</li>
+<li>
+    Find information about another user.
+    <pre>/whois <i>nick</i>
+/msg nickserv info <i>nick</i></pre>
+</li>
+<li>
+    Recover your nick.
+    <pre>/msg nickserv ghost <i>nick</i> <i>password</i></pre>
+</li>
+<li>
+    Register your nick.
+    <pre>/msg nickserv register <i>password</i> <i>email</i></pre>
+</li>
+<li>
+    Identify yourself to the network.
+    <pre>/msg nickserv identify <i>password</i></pre>
+</li>
+</ol>
+
+<h2 id="operator">Operator Cheat Sheet</h2>
+<p>
+    This section is relevant only to a channel operator. Founder of a
+    channel, its operators or Freenode staff can add users as new
+    operators of a channel. Here is a list of commands that are useful
+    to a channel operator.
+</p>
+<ol>
+    <li>
+        Become an operator.
+        <pre>/msg chanserv op #fosskiit</pre>
+    </li>
+    <li>
+        Become a normal user again (deop) with any one of the following
+        commands. It is good etiquette to deop yourself when you don't
+        need the operator privilege.
+        <pre>/msg chanserv deop #fosskiit
+/deop #fosskiit
+/mode -o #fosskiit</pre>
+        Note: Only one of these commands need to be entered. These
+        three commands are merely three examples of achieving the same
+        result.
+    </li>
+    <li>
+        Change topic of a channel. You may run the first command as a
+        normal user as long as you have operator access for the
+        channel. You may be required to become an operator before
+        running the second command.
+        <pre>/msg chanserv topic #fosskiit <i>New topic</i>
+/topic <i>New topic</i></pre>
+        Note: Only one of these two commands need to be entered.
+    </li>
+    <li>
+        Mute a troll based on nickname.
+        <pre>/mode +q <i>nick</i></pre>
+    </li>
+    <li>
+        Unmute a user based on nickname.
+        <pre>/mode -q <i>nick</i></pre>
+    </li>
+    <li>
+        Mute a troll based on hostmask. Sometimes a troll may
+        reconnect with different nicks and spam the channel. In such a
+        case, the troll may be muted based on their hostmask.
+        <pre>/mode +q *!*@<i>hostmask</i></pre>
+    </li>
+    <li>
+        Find the hostmask of a nickname.
+        <pre>/whois <i>nick</i></pre>
+        Look for a pattern that looks like
+        <code><i>username</i>@<i>hostmask</i></code> in the output. The
+        hostmask part may be a domain name, an IP address or a cloak.
+        This part may be used to mute a troll in the command described
+        in the previous point.
+    </li>
+    <li>
+        The following ChanServ commands automatically figures out the
+        hostmask of a nick and mutes or unmutes a nick based on its
+        hostmask.
+        <pre>/msg chanserv quiet #fosskiit <i>nick</i>
+/msg chanserv unquiet #fosskiit <i>nick</i></pre>
+    </li>
+    <li>
+        Ban a troll, i.e., mute the troll and prevent the troll from
+        joining the channel again.
+        <pre>/mode +b <i>nick</i></pre>
+    </li>
+    <li>
+        Unban a user.
+        <pre>/mode -b <i>nick</i></pre>
+    </li>
+    <li>
+        Kick a troll out of the channel.
+        <pre>/kick <i>nick</i></pre>
+    </li>
+</ol>
+
+<p>
+Let us see a few examples of how to mute a troll based on hostname or
+cloak.
+</p>
+
+<ul>
+<li>
+    Mute the hostname in <code>~chatzilla@tuwien.teleweb.at</code>.
+    <pre>/mode +q *!*@tuwien.teleweb.at</pre>
+</li>
+<li>
+    Mute the IP address in <code>~zumbi@77.230.237.25</code>.
+    <pre>/mode +q *!*@77.230.237.25</pre>
+</li>
+<li>
+    Mute the cloak in <code>~humpty@unaffiliated/humpty</code>.
+    <pre>/mode +q *!*@unaffiliated/humpty</pre>
+</li>
+</ul>

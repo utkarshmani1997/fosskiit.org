@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ block "title" . }}
+    {{ .Site.Title }} - Open Source Society of KIIT University
+    {{ end }}</title>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+</head>
+
+<body>
+
+<nav>
+<div>
+    <a href="/"><img src="/img/fosskiit.png" alt="FOSS@KIIT Logo"></a>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/irc/">IRC</a>
+    <a href="/join/">Join</a>
+</div>
+</nav>
+
+<main>
+{{ block "main" . }}
+{{ end }}
+</main>
+
+<footer>
+<section>
+<div>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.11';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-page" data-href="https://www.facebook.com/fosskiit"
+    data-small-header="true" data-adapt-container-width="true"
+    data-hide-cover="false" data-show-facepile="true"><blockquote
+    cite="https://www.facebook.com/fosskiit"
+    class="fb-xfbml-parse-ignore"><a
+    href="https://www.facebook.com/fosskiit">FOSS@KIIT</a></blockquote></div>
+</div>
+<div>
+    <a href="https://twitter.com/fosskiit"
+       class="twitter-follow-button"
+       data-show-screen-name="false"
+       data-show-count="false">Follow @fosskiit</a>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8">
+    </script>
+    &nbsp;
+    <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+    <script type="IN/FollowCompany" data-id="18399858"></script>
+</div>
+<div>
+<p>
+    &copy; 2018 FOSS@KIIT, KIIT University
+</p>
+<p>
+    This is free and open source website. The source code of this
+    website is available on
+    <a href="https://github.com/fosskiit/fosskiit.org">GitHub</a>.
+    You are welcome to modify and improve this website under the terms
+    of the <a href="/license/">MIT License</a>.
+</p>
+<p>
+    To report bugs, suggest improvements, or ask questions,
+    <a href="https://github.com/fosskiit/fosskiit.org/issues">create
+    a new issue</a>.
+</p>
+</div>
+<div class="links">
+    <a href="https://github.com/fosskiit/fosskiit.org">Source</a>
+    <a href="https://github.com/fosskiit/fosskiit.org/issues">Issues</a>
+    <a href="https://github.com/fosskiit">GitHub</a>
+    <a href="https://twitter.com/fosskiit">Twitter</a>
+    <a href="https://www.linkedin.com/company/fosskiit/">LinkedIn</a>
+    <a href="https://www.facebook.com/fosskiit/">Facebook</a>
+</div>
+</section>
+</footer>
+</html>

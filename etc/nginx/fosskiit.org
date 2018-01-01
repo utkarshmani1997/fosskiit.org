@@ -1,0 +1,35 @@
+# Nginx configuration for live environment.
+
+# https://fosskiit.org/
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+
+    server_name fosskiit.org;
+
+    ssl_certificate /etc/letsencrypt/live/fosskiit.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/fosskiit.org/privkey.pem;
+
+    root /var/www/fosskiit.org;
+}
+
+# https://www.fosskiit.org/ => https://fosskiit.org/
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+
+    server_name www.fosskiit.org;
+
+    ssl_certificate /etc/letsencrypt/live/fosskiit.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/fosskiit.org/privkey.pem;
+
+    return 301 https://fosskiit.org$request_uri;
+}
+
+# http://fosskiit.org/, http://www.fosskiit.org/ => https://fosskiit.org/
+server {
+    listen 80;
+    listen [::]:80;
+    server_name fosskiit.org www.fosskiit.org;
+    return 301 https://fosskiit.org$request_uri;
+}
